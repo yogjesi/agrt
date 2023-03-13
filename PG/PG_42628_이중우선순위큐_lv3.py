@@ -11,7 +11,6 @@ def solution(operations):
             q.append(n)
         elif c == "D":
             if n == 1:   # 최댓값 삭제
-
                 pass
             else:        # 최솟값 삭제
                 pass
