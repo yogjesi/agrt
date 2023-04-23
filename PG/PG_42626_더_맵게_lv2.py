@@ -1,6 +1,10 @@
+# 2023.04.10
+# 다시 풀어본다... 힙을 정복하자.
+
+
+
 # 2022.08.12
 # Heap(힙)
-
 
 # def solution(scoville, K):
 #     scoville.sort()
