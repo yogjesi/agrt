@@ -1,5 +1,29 @@
-# 2023.04.10
-# 다시 풀어본다... 힙을 정복하자.
+# 23.04.05
+# 일부 실패, 일부 성공
+
+from heapq import heappush, heappop, heapify
+
+def solution(scoville, K):
+    answer = 0
+    heapify(scoville)
+    # print(scoville)
+    while len(scoville) > 1:
+        scv1 = heappop(scoville)
+        scv2 = heappop(scoville)
+        nscv = scv1 + (scv2 * scv2)
+        heappush(scoville, nscv)
+        std = True
+        for food in scoville:
+            if food < K:
+                std = False
+                break
+        if std == True:
+            answer += 1
+            break
+        else:
+            answer += 1
+
+    return answer
 
 
 

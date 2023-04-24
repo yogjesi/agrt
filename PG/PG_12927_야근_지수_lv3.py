@@ -1,3 +1,24 @@
+# 23.04.24
+
+from heapq import heappush, heappop
+
+def solution(n, works):
+    answer = 0
+    arr = []
+    for work in works:
+        heappush(arr, -work)
+    for _ in range(n):
+        num = heappop(arr)
+        if num < 0:
+            heappush(arr, num+1)
+        else:
+            heappush(arr, num)
+            break
+    for w in arr:
+        answer += w*w
+    return answer
+
+
 # 23.03.11
 # 아 lv3이네
 
