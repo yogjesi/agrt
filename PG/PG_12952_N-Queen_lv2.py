@@ -62,9 +62,7 @@ def solution(n):
         if i == n:
             answer += 1
             return
-
         std = False
-
         for j in range(n):
             if j not in field and checker(field, i, j):
                 std = True
@@ -72,7 +70,6 @@ def solution(n):
                 # print(field)
                 nqueen(field, i+1)
                 field.pop()
-
         if not std:
             return
     nqueen(field, 0)
