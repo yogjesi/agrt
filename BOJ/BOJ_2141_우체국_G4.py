@@ -9,10 +9,21 @@ info = []
 front, back, total = 0, 0, 0
 for _ in range(N):
     x, a = map(int, input().split())
-    info.append((x, a))
+    info.append([x, a])
     back += a
-info.sort()
-s, e = info[0][0], info[-1][0] 
+info.sort(key = lambda x: x[0])
+
+cnt = 0
+answer = 0
+for i in range(N):
+    cnt += info[i][1]
+    if cnt >= back/2:
+        answer = info[i][0]
+        break
+
+print(answer)
+
+
 # 3-2
 
 
