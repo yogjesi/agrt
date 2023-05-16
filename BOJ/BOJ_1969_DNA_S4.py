@@ -19,7 +19,7 @@ for i in range(N):
         else:
             answer[j][3] += 1
     all.append(inst)
-
+print(all)
 
 # 2. 문자열 구하기
 result = ''
