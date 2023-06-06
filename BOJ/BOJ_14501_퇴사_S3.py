@@ -16,4 +16,5 @@ for i in range(1, N+1):             # 1 ~ N일동안 돌면서
         continue
     if p + max(result[:i]) > result[i+t-1]:         # 만약 이전까지의 최대 페이 + 현재 얻을 수 있는 페이 값이 이전에 누적된 페이보다 크다면
         result[i+t-1] = p + max(result[:i])         # 새롭게 값을 갈아치워준다.
+    print(result)
 print(max(result))                                  # 그리고 result에서 최대값 뽑아주면 끝.
