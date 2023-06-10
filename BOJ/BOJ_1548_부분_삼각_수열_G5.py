@@ -78,7 +78,7 @@ else:
 # print(result)
 
 
-# 첫 번 째 방법 : 실패. 근데 왜 실패했는지 알겠음.
+# # 첫 번 째 방법 : 실패. 근데 왜 실패했는지 알겠음.
 # arr.sort()
 # if len(arr) < 3:                    # 삼각형이 안 만들어지는 케이스
 #     print(len(arr))

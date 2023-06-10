@@ -10,19 +10,19 @@ for _ in range(N):
     field.append(list(map(int, input().split())))
 
 answer = 0                                  # 정답 초기화
-# 2. tetromino 찾는 함수 작성
+# 2. tetromino 찾는 함수 작성 : dfs
 def tetromino(now, cnt, i, j, visited):
     global answer                           # global로 answer에 접근
     if now == 4:                            # 2-1. 베이스 조건 : 네 개의 정사각형을 모두 붙였다면
         if cnt > answer:                    # answer 변경 여부 확인
-            answer = cnt                    # answer 변경
+            answer = cnt                    # a nswer 변경
         return
 
     # 방향 조작용
     dxs = [0, 1, 0, -1]
     dys = [1, 0, -1, 0]
                                                     # 2-2. 하나를 중심으로 둘러싸인 특이 케이스 (dfs로 접근 불가)
-    if now == 0:                                    # visited에 하나만 있을 때 옆을 둘러싼 세 개를 한 꺼번에 계산할 것임
+    if now == 1:                                    # visited에 하나만 있을 때 옆을 둘러싼 세 개를 한 꺼번에 계산할 것임
         nums = [] # 후보 받을 곳
         for n in range(4):
             dx, dy = i + dxs[n], j + dys[n]
