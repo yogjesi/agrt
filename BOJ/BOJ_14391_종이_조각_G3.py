@@ -11,3 +11,5 @@ for i in range(N):
     arr.append(list(map(int, ' '.join(input()).split())))
 print(arr)
 
+# 경합을 벌여볼까?
+# 으악...
